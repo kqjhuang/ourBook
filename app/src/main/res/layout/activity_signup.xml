@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="none"
+    android:background="@drawable/background_login"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+        <include
+            android:id="@+id/include1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            layout="@layout/titlelayout" />
+
+        <!-- padding 内边距   layout_margin 外边距
+                android:layout_alignParentTop 布局的位置是否处于顶部 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dip"
+            android:layout_margin="15dip"
+            >
+
+            <TextView  android:id="@+id/hello"
+                android:text="@string/hello"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#888"
+                android:textSize="25sp"
+                />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/signup_div"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dip"
+            android:layout_margin="15dip"
+            android:background="@drawable/background_login_div_bg"
+            >
+
+            <!-- 邮箱 -->
+            <TextView
+                android:id="@+id/Email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="3dp"
+                android:text="@string/login_label_Email"
+                style="@style/normalText"/>
+            <bookfriend.tools.CleanableEditText
+                android:id="@+id/Email_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Email"
+                android:singleLine="true"
+                android:drawableRight="@drawable/delete_selector"
+                android:background="@drawable/login_edittext_bg"
+                android:inputType="textEmailAddress"/>
+            <!-- 昵称 -->
+            <TextView
+                android:id="@+id/nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/Email_edit"
+                android:layout_marginTop="3dp"
+                android:text="@string/login_label_nickname"
+                style="@style/normalText"/>
+            <bookfriend.tools.CleanableEditText
+                android:id="@+id/nickname_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nickname"
+                android:singleLine="true"
+                android:inputType="text"
+                android:drawableRight="@drawable/delete_selector"
+                android:background="@drawable/login_edittext_bg"/>
+            <!-- 密码 text -->
+            <TextView
+                android:id="@+id/signup_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nickname_edit"
+                android:layout_marginTop="3dp"
+                android:text="@string/login_label_password"
+                style="@style/normalText"/>
+            <bookfriend.tools.CleanableEditText
+                android:id="@+id/password_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/signup_password"
+                android:password="true"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:drawableRight="@drawable/delete_selector"
+                android:background="@drawable/login_edittext_bg"
+                />
+            <!-- 确认密码 text -->
+            <TextView
+                android:id="@+id/signup_passwordagain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/password_edit"
+                android:layout_marginTop="3dp"
+                android:text="@string/login_label_passwordagain"
+                style="@style/normalText"/>
+            <bookfriend.tools.CleanableEditText
+                android:id="@+id/passwordagain_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/signup_passwordagain"
+                android:password="true"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:drawableRight="@drawable/delete_selector"
+                android:background="@drawable/login_edittext_bg"
+                />
+            <!--weixin text -->
+            <TextView
+                android:id="@+id/weixin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_below="@id/passwordagain_edit"
+                android:text="@string/login_label_weixin"
+                style="@style/normalText"/>
+            <bookfriend.tools.CleanableEditText
+                android:id="@+id/weixin_edit"
+                android:hint="@string/login_weixin_hint"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weixin"
+                android:singleLine="true"
+                android:inputType="text"
+                android:drawableRight="@drawable/delete_selector"
+                android:background="@drawable/login_edittext_bg"/>
+
+
+            <!-- 确认button -->
+            <Button
+                android:layout_marginTop="10dip"
+                android:id="@+id/ensure"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weixin_edit"
+                android:text="@string/login_label_ensure"
+                android:background="@drawable/blue_selector"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

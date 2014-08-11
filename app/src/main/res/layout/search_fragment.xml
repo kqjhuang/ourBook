@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    >
+<LinearLayout 
+    android:id="@+id/linearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="#b5b5b5"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/list_selector"
+         />
+   
+</LinearLayout> 
+
+<LinearLayout
+    android:id="@+id/linearLayout2"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+<RelativeLayout 
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      >
+
+<ImageView android:id="@+id/search_image1"
+	        android:src="@drawable/search_image"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginRight="25dp"
+	        android:layout_marginLeft="10dp"
+	         />
+
+</RelativeLayout> 
+
+
+<RelativeLayout 
+  	android:id="@+id/login_div2"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+    android:padding="15dip"        
+  	android:layout_margin="15dip" >
+    
+      <bookfriend.tools.CleanableEditText
+        android:id="@+id/search_edit"
+        android:layout_marginTop="60dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:background="@drawable/login_edittext_bg" 
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:singleLine="true"
+        android:drawableRight="@drawable/delete_selector"
+        android:hint="查找"    
+        android:inputType="text"/>
+    <Button 
+    	android:id="@+id/search_but"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="15dip"
+    	android:layout_margin = "20dip"
+    	android:layout_below="@+id/search_edit"
+    	android:text="@string/login_label_search"
+    	android:background="@drawable/blue_selector"
+    />  
+</RelativeLayout>
+</LinearLayout>
+</FrameLayout>

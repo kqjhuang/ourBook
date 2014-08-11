@@ -1,0 +1,114 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           android:background="@drawable/background" >
+            
+
+
+<LinearLayout
+    android:id="@+id/linearLayout"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              >
+              
+      <include
+            android:id="@+id/include1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            layout="@layout/titlelayout" />
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bookview_title1"
+           
+            android:layout_gravity="center|bottom|left|right|top"
+            android:textColor="#000000"
+            android:textSize="30px"
+            android:gravity="center_horizontal"/>
+    <LinearLayout
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10px"
+                  android:paddingLeft="20px">
+        <ImageView
+                android:layout_width="150px"
+                android:layout_height="170px"
+                android:id="@+id/bookview_cover"/>
+        <LinearLayout
+                      android:orientation="vertical"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="20px">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookview_author1"
+                    android:text="作者"
+                    android:textSize="25px"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookview_publisher1"
+                    android:text="出版社"
+                    android:layout_marginTop="5px"
+                    android:textSize="25px"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookview_publisherdate1"
+                    android:text="时间"
+                    android:layout_marginTop="5px"
+                    android:textSize="25px"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookview_isbn1"
+                    android:text="ISBN"
+                    android:layout_marginTop="5px"
+                    android:textSize="25px"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookview_userName1"
+                    android:text="userName"
+                    android:layout_marginTop="5px"
+                    android:textSize="25px"/>
+             <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookview_userEmail1"
+                    android:text="userEmail"
+                    android:layout_marginTop="5px"
+                    android:textSize="25px"/>
+              <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookview_wechatNum1"
+                    android:text="wechatNum"
+                    android:layout_marginTop="5px"
+                    android:textSize="25px"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="内容介绍"
+            android:gravity="center_horizontal"
+            android:textSize="28px"
+            android:layout_marginTop="10px"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="具体内容"
+            android:layout_marginTop="10px"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:id="@+id/bookview_summary1"/>
+
+    
+</LinearLayout>
+
+</ScrollView>
