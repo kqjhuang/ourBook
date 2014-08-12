@@ -75,6 +75,12 @@ public class Signup_activity extends Activity implements OnClickListener{
 		String signup_password_S =signup_password.getText().toString();
 		String weixin_S =weixin.getText().toString();
 		String signup_passwordagain_S =signup_passwordagain.getText().toString();
+
+        if(nickname_S.equals("")){
+            Toast.makeText(Signup_activity.this,"昵称不可为空", Toast.LENGTH_LONG).show();
+            return;
+        }
+
 		if(signup_password_S.equals(signup_passwordagain_S)){
 			Pattern pattern = Pattern.compile("^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$");
 			Matcher matcher = pattern.matcher(email_S);

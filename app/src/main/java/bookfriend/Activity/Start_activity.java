@@ -17,18 +17,20 @@ public class Start_activity extends Activity {
 
     public ImageView image;
 
-
-    private static final int GO_HOME = 1;
-    private static final int GO_GUIDE = 2;
-
-    private static final long DELAY_MILLIS = 3000;
     public boolean isFirstIn ;
     public String username;
     public String password;
+    private SharedPreferences preferences;
+    public String nickName;
+
+    private static final int GO_HOME = 1;
+    private static final int GO_GUIDE = 2;
     private static final String SHAREDPREFERENCES_NAME = "cloud";
+    private static final long DELAY_MILLIS = 3000;
+
     //private Button button;
 
-    private SharedPreferences preferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,7 +78,7 @@ public class Start_activity extends Activity {
             if(msg.obj != null && msg.obj.equals("success")){
                 Intent intent = new Intent();
                 intent.setClass(Start_activity.this, Main_activity.class);
-                intent.putExtra("username","huang");    //这里还没有获得username先写死
+                intent.putExtra("username",nickName);    //这里还没有获得username先写死
                 Start_activity.this.startActivity(intent);
                 try{
                     Thread.sleep(666);

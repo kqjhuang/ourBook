@@ -127,6 +127,11 @@ public class Main_activity extends Activity {
         switch(item.getItemId()) {
             case R.id.action_username:
                 // create intent to perform web search for this planet
+                FragmentManager fragmentManager;
+                Fragment fragment;
+                fragment = new User_fragment();
+                fragmentManager = getFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

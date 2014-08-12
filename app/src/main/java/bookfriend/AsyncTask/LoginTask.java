@@ -4,6 +4,8 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Message;
 import android.widget.Toast;
+
+import org.json.JSONArray;
 import org.json.JSONObject;
 import java.util.HashMap;
 
@@ -20,9 +22,11 @@ public class LoginTask extends AsyncTask<String, Integer, Integer> {
     public HttpAgent httpAgent = new HttpAgent();
     public HashMap<String, Object> paras = new HashMap<String, Object>();
     public String code = "";
+    public JSONObject Msg;
     private String user = "";
     private String password = "";
     private Login_activity login;
+
 
     public  LoginTask(String A ,String B,Login_activity C){
         user=A;
@@ -43,9 +47,15 @@ public class LoginTask extends AsyncTask<String, Integer, Integer> {
             editor.putString("username", user);
             editor.putString("password", password);
             editor.commit();
-            Message msg = Message.obtain();
-            msg.obj = "success";
-            login.handler.sendMessage(msg);
+            Message messageg = Message.obtain();
+            messageg.obj = "success";
+            try {
+                login.nickName = Msg.getString("userName");
+            }catch (Exception e ){
+                e.printStackTrace();
+            }
+            login.handler.sendMessage(messageg);
+
         }else{
             Toast.makeText(login, "用户名或密码错误", Toast.LENGTH_LONG).show();
         }
@@ -80,6 +90,7 @@ public class LoginTask extends AsyncTask<String, Integer, Integer> {
         try{
             JSONObject mess=new JSONObject(result);
             code = mess.getString("code");
+            Msg = mess.getJSONObject("msg");
         }catch (Exception e) {
             e.printStackTrace();
         }

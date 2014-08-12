@@ -18,10 +18,13 @@ import bookfriend.http.HttpAgent;
 public class AutoLoginTask extends AsyncTask<String, Integer, Integer> {
     public HttpAgent httpAgent = new HttpAgent();
     public HashMap<String, Object> paras = new HashMap<String, Object>();
+    private Start_activity login;
+
     public String code = "";
     private String user = "";
     private String password = "";
-    private Start_activity login;
+    private JSONObject Msg;
+
 
     public  AutoLoginTask(String A ,String B,Start_activity C){
         user=A;
@@ -39,6 +42,11 @@ public class AutoLoginTask extends AsyncTask<String, Integer, Integer> {
         if(code.equals("200")){
             Message msg = Message.obtain();
             msg.obj = "success";
+            try {
+                login.nickName = Msg.getString("userName");
+            }catch (Exception e ){
+                e.printStackTrace();
+            }
             login.invisiableHandler.sendMessage(msg);
         }else{
             Toast.makeText(login, "用户名或密码错误", Toast.LENGTH_LONG).show();
@@ -74,6 +82,7 @@ public class AutoLoginTask extends AsyncTask<String, Integer, Integer> {
         try{
             JSONObject mess=new JSONObject(result);
             code = mess.getString("code");
+            Msg = mess.getJSONObject("msg");
         }catch (Exception e) {
             e.printStackTrace();
         }

@@ -26,7 +26,6 @@ public class LabelTask extends AsyncTask<String, Integer, Integer> {
     private String code = "";
     public Label_fragment label;
     private LazyAdapter adapter;
-    private JSONArray Msg1;
     public static final String KEY_title = "bookName";
     public static final String KEY_authorName = "authorName";
 
@@ -47,9 +46,9 @@ public class LabelTask extends AsyncTask<String, Integer, Integer> {
         }else{
             Toast.makeText(label.getActivity(), "网络错误", Toast.LENGTH_LONG).show();
         }
-        label.Msg1 = this.Msg1 = getMsg();
+        label.Msg1 =  Msg;
         try {
-            if(Msg1.length() ==0)
+            if(Msg.length() ==0)
             {
                 Toast.makeText(label.getActivity(), "找不到", Toast.LENGTH_LONG).show();
 
@@ -58,8 +57,8 @@ public class LabelTask extends AsyncTask<String, Integer, Integer> {
                 ArrayList<HashMap<String, String>> songsList = new ArrayList<HashMap<String, String>>();
                 for (int i = 0; i < Msg.length(); i++) {
                     HashMap<String, String> map = new HashMap<String, String>();
-                    map.put(KEY_title, Msg1.getJSONObject(i).getString("labelName"));
-                    map.put(KEY_authorName, Msg1.getJSONObject(i).getString("id"));
+                    map.put(KEY_title, Msg.getJSONObject(i).getString("labelName"));
+                    map.put(KEY_authorName, Msg.getJSONObject(i).getString("id"));
                     songsList.add(map);
                 }
 
@@ -109,7 +108,5 @@ public class LabelTask extends AsyncTask<String, Integer, Integer> {
         return null;
     }
 
-    public JSONArray getMsg(){
-        return this.Msg;
-    }
+
 }

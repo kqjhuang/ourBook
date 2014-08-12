@@ -33,6 +33,8 @@ public class Login_activity extends Activity implements OnClickListener {
     private CleanableEditText user_name;
     private CleanableEditText user_password;
 
+    public String nickName = "";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -97,7 +99,7 @@ public class Login_activity extends Activity implements OnClickListener {
             if(msg.obj.equals("success")){
                 Intent intent = new Intent();
                 intent.setClass(Login_activity.this, Main_activity.class);
-                intent.putExtra("username","huang");
+                intent.putExtra("username",nickName);
                 Login_activity.this.startActivity(intent);
                 Login_activity.this.finish();
             }
