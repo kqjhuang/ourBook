@@ -2,16 +2,16 @@
 <pre-dex-items>
 
     <item
-        dex="D:\workbench\ourBook\app\build\intermediates\pre-dexed\debug\zxing-2a0562e1d66a37f2f424f840df57a49c691467b4.jar"
-        jar="D:\workbench\ourBook\app\libs\zxing.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="e88c14e6e7daa0fa65172a62b54ee6a16ff4162d"/>
-    <item
-        dex="D:\workbench\ourBook\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-3979f6804c2765098922abea2791093313543bba.jar"
-        jar="D:\搜狗高速下载\android-studio\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        dex="E:\workbench\ourBook\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-d851921844f9c4b07ea378275f26a94d42d31cb6.jar"
+        jar="D:\Android\android-studio\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+    <item
+        dex="E:\workbench\ourBook\app\build\intermediates\pre-dexed\debug\zxing-d8f25683348c7d6f45830d7ed16d28e7a8a45c45.jar"
+        jar="E:\workbench\ourBook\app\libs\zxing.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e88c14e6e7daa0fa65172a62b54ee6a16ff4162d"/>
 
 </pre-dex-items>

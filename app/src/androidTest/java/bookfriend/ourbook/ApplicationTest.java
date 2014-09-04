@@ -1,4 +1,4 @@
-package bookfriend.ourbook;
+package com.bookfriend.ourbook;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -55,7 +55,7 @@
                 android:layout_marginTop="3dp"
                 android:text="@string/login_label_Email"
                 style="@style/normalText"/>
-            <bookfriend.tools.CleanableEditText
+            <com.bookfriend.tools.CleanableEditText
                 android:id="@+id/Email_edit"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
                 android:layout_marginTop="3dp"
                 android:text="@string/login_label_nickname"
                 style="@style/normalText"/>
-            <bookfriend.tools.CleanableEditText
+            <com.bookfriend.tools.CleanableEditText
                 android:id="@+id/nickname_edit"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
                 android:layout_marginTop="3dp"
                 android:text="@string/login_label_password"
                 style="@style/normalText"/>
-            <bookfriend.tools.CleanableEditText
+            <com.bookfriend.tools.CleanableEditText
                 android:id="@+id/password_edit"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -112,7 +112,7 @@
                 android:layout_marginTop="3dp"
                 android:text="@string/login_label_passwordagain"
                 style="@style/normalText"/>
-            <bookfriend.tools.CleanableEditText
+            <com.bookfriend.tools.CleanableEditText
                 android:id="@+id/passwordagain_edit"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -132,7 +132,7 @@
                 android:layout_below="@id/passwordagain_edit"
                 android:text="@string/login_label_weixin"
                 style="@style/normalText"/>
-            <bookfriend.tools.CleanableEditText
+            <com.bookfriend.tools.CleanableEditText
                 android:id="@+id/weixin_edit"
                 android:hint="@string/login_weixin_hint"
                 android:layout_width="fill_parent"

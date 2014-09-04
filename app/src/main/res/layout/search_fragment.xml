@@ -52,7 +52,7 @@
     android:padding="15dip"        
   	android:layout_margin="15dip" >
     
-      <bookfriend.tools.CleanableEditText
+      <com.bookfriend.tools.CleanableEditText
         android:id="@+id/search_edit"
         android:layout_marginTop="60dp"
         android:layout_width="fill_parent"

@@ -47,7 +47,7 @@
                 android:layout_weight="2"
                 >
 
-                <bookfriend.tools.CleanableEditText
+                <com.bookfriend.tools.CleanableEditText
                     android:id="@+id/username_edit"
                     android:layout_marginTop="60dp"
                     android:layout_width="fill_parent"
@@ -62,7 +62,7 @@
                     android:inputType="textEmailAddress"/>
 
 
-                <bookfriend.tools.CleanableEditText
+                <com.bookfriend.tools.CleanableEditText
                     android:id="@+id/password_edit"
                     android:layout_marginLeft="10dip"
                     android:layout_marginRight="10dip"
